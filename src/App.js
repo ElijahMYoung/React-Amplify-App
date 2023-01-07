@@ -1,11 +1,12 @@
 import "./App.css";
-import "./css/Home.css";
 import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
+import "./css/Home.css";
 import Home from "./pages";
 import Productas from "./pages/products";
 import Contact from "./pages/contact";
-import showMenu from "./components/mobileMenu/showMenu";
-import hideMenu from "./components/mobileMenu/hideMenu";
+import Footer from "./components/footer/footer";
+// import showMenu from "./components/mobileMenu/showMenu";
+// import hideMenu from "./components/mobileMenu/hideMenu";
 
 function App() {
   return (
@@ -13,14 +14,18 @@ function App() {
       <header>
         <nav className="nav">
           <NavLink to="/">
-            <img src="Images/Waxing_Wandlight.png" alt="Logo" class="logo" />
+            <img
+              src="Images/Waxing_Wandlight.png"
+              alt="Logo"
+              className="logo"
+            />
           </NavLink>
-          <div class="nav-links" id="navLinks">
+          <div className="nav-links" id="navLinks">
             <img
               src="Images/black-circle-close-button-png-5.png"
               alt="circle close button icon"
-              class="sidebtn"
-              onclick={hideMenu()}
+              className="sidebtn"
+              // onclick={hideMenu()}
             />
             <ul>
               <li>
@@ -37,8 +42,8 @@ function App() {
           <img
             src="Images/menu_icon.png"
             alt="menu bars icon"
-            class="sidebtn"
-            onclick={showMenu()}
+            className="sidebtn"
+            // onclick={showMenu()}
           />
         </nav>
         <h1>Waxing Wandlight</h1>
@@ -50,6 +55,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
         </Routes>
       </main>
+      <Footer />
     </BrowserRouter>
   );
 }
