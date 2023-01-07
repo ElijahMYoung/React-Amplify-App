@@ -5,6 +5,7 @@ import Home from "./pages";
 import Productas from "./pages/products";
 import Contact from "./pages/contact";
 import Footer from "./components/footer/footer";
+import logo from "./images/Waxing_Wandlight.png";
 // import showMenu from "./components/mobileMenu/showMenu";
 // import hideMenu from "./components/mobileMenu/hideMenu";
 
@@ -14,11 +15,7 @@ function App() {
       <header>
         <nav className="nav">
           <NavLink to="/">
-            <img
-              src="Images/Waxing_Wandlight.png"
-              alt="Logo"
-              className="logo"
-            />
+            <img src={logo} alt="Logo" className="logo" />
           </NavLink>
           <div className="nav-links" id="navLinks">
             <img
